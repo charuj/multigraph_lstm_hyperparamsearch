@@ -3,16 +3,6 @@ import numpy as np
 
 num_searches=5 #aribtrarily chosen
 
-'''
-When deciding your number of searches (num_searches), here are a few things to consider:
-
-1. How much time you have
-2. How many other models you have
-3. How much things are improving over the runs
-
-You can leave things running over night and then decide whether to continue, the next morning.
-
-'''
 
 def hyperparam_search(num_searches):
     hyperparam_dict={}
