@@ -3,12 +3,12 @@ import numpy as np
 import cPickle as pickle
 
 
-
+num_searches = 5 
 
 def hyperparam_search(num_searches):
     '''
     :param num_searches: number of searches/experiments to run, where each experiment has a different set of hyperparameters
-    :return: a dictionary of hyperparameters 
+    :return: a dictionary of hyperparameters
     '''
     hyperparam_dict={}
 
@@ -95,6 +95,10 @@ def launchG(self, train_inputs, train_targets, valid_inputs, valid_targets, num_
 
             return valid_cost
 
+
+####### MAIN ########
+
+hyperparam_dict = hyperparam_search(num_searches)
 
 ## Running loop for experiments
 for j in range(num_searches): # loop over the number of hyperparameter searches
